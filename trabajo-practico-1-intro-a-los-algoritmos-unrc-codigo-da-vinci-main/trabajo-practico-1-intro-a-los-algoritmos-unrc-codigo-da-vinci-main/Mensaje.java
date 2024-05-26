@@ -81,7 +81,7 @@ public class Mensaje
         if (!esAscii(linea)) 
             throw new IllegalArgumentException("La linea a agregar contiene caracteres no ascii.");
         
-        if (pos < 0 || pos >= cantLineas())
+        if (pos < 0 || pos > cantLineas())
             throw new IllegalArgumentException("Posición inválida. Existe fuera de la lista.");
         lineas.add(pos,linea);
         if (lineas.get(pos) != linea)
@@ -145,8 +145,8 @@ public class Mensaje
     public boolean equals(Mensaje otro)
     {
         if (otro == null) {
-    return false;
-    }
+            return false;
+        }
         if (lineas.size() != otro.lineas.size()) {
         return false;
         }
@@ -159,8 +159,6 @@ public class Mensaje
             i ++;
         }
         return igualdad;
-        
-      
     }
     
     

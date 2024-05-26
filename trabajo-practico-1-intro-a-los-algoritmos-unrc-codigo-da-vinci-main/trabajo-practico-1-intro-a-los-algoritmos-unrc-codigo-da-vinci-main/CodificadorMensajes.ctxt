@@ -22,4 +22,6 @@ comment6.text=\r\n\ Computa\ el\ c\u00F3digo\ de\ encripci\u00F3n\ correspondien
 comment7.params=str\ codigo
 comment7.target=java.lang.String\ encriptarCadena(java.lang.String,\ int[])
 comment7.text=\r\n\ Encripta\ una\ cadena,\ dado\ un\ c\u00F3digo\ num\u00E9rico.\ Se\ usan\ los\ d\u00EDgitos\ del\ c\u00F3digo\r\n\ para\ reemplazar\ cada\ caracter\ de\ la\ cadena\ por\ el\ caracter\ correspondiente\ a\ \r\n\ "trasladar"\ el\ mismo\ el\ n\u00FAmero\ de\ lugares\ que\ indica\ el\ c\u00F3digo.\ El\ c\u00F3digo\ tiene\r\n\ m\u00FAltiples\ valores\:\ se\ usa\ el\ primero\ para\ el\ primer\ caracter,\ el\ segundo\ para\ el\ segundo,\r\n\ y\ as\u00ED\ sucesivamente.\ Si\ se\ agota\ el\ c\u00F3digo,\ se\ vuelve\ al\ comienzo\ del\ mismo,\ hasta\r\n\ encriptar\ toda\ la\ cadena.\r\n\ Precondici\u00F3n\:\ tanto\ str\ como\ codigo\ no\ deben\ ser\ nulos.\r\n\ @param\ str\ es\ la\ cadena\ a\ encriptar\r\n\ @param\ codigo\ es\ el\ c\u00F3digo\ a\ utilizar\ para\ la\ encripci\u00F3n\r\n
-numComments=8
+comment8.params=
+comment8.target=java.lang.String\ contMensaje()
+numComments=9

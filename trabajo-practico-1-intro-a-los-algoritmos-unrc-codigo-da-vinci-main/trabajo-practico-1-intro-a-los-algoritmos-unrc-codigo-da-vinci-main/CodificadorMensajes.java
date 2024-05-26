@@ -132,34 +132,32 @@ public class CodificadorMensajes
         int indice = 0;
         int suma = 0;
         while (indice < str.length()) {
-        suma = suma + str.charAt(indice);
-        indice ++;
+            suma = suma + str.charAt(indice);
+            indice ++;
+        }
+        suma = suma % 99991;
         
-    }
-    suma = suma % 99991;
-    
-    int sumaAuxiliar1 = suma;
-    int sumaAuxiliar2 = suma;
-    int cantCifras = 0;
-    int[] codigo = new int[cantCifras];
-    int cifra = 0;
-    int i = 0;
-    
-    while (sumaAuxiliar1 != 0) {
-        sumaAuxiliar1 = sumaAuxiliar1 / 10;
-        cantCifras ++;
-    }
-    int n = cantCifras;
-    while (n >= 0) {
-        cifra = sumaAuxiliar2 / (int) (Math.pow(10,n));
-        codigo [i] = cifra;
-        sumaAuxiliar2 = sumaAuxiliar2 % (int) (Math.pow(10,n));
-        n --;
-        i ++;
+        int sumaAuxiliar1 = suma;
+        int cantCifras = 0;        
+        while (sumaAuxiliar1 != 0) {
+            sumaAuxiliar1 = sumaAuxiliar1 / 10;
+            cantCifras ++;
+        }    
+        int sumaAuxiliar2 = suma;
+        int[] codigo = new int[cantCifras];
+        int cifra = 0;
+        int i = 0;  
+        int n = cantCifras - 1;
+        while (n >= 0) {
+            cifra = sumaAuxiliar2 / (int) (Math.pow(10,n));
+            codigo[i] = cifra;
+            sumaAuxiliar2 = sumaAuxiliar2 % (int) (Math.pow(10,n));
+            n --;
+            i ++;
         
-    }
-    return codigo;
-} 
+        }
+        return codigo;
+    } 
 
 
 
@@ -189,4 +187,7 @@ public class CodificadorMensajes
         return result;
     }
     
+    public String contMensaje(){
+        return mensajeCodificado.toString(); 
+    }
 }

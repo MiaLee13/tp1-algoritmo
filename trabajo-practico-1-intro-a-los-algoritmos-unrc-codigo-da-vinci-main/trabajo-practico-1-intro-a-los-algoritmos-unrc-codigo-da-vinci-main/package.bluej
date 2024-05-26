@@ -2,10 +2,10 @@
 dependency1.from=MensajeTest
 dependency1.to=Mensaje
 dependency1.type=UsesDependency
-dependency2.from=CodificadorMensajes
+dependency2.from=DecodificadorMensajes
 dependency2.to=Mensaje
 dependency2.type=UsesDependency
-dependency3.from=DecodificadorMensajes
+dependency3.from=CodificadorMensajes
 dependency3.to=Mensaje
 dependency3.type=UsesDependency
 editor.fx.0.height=838
